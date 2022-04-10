@@ -1,0 +1,24 @@
+:root {
+  --primary-background: #212529;
+  --secondary-background: #343a40;
+  --tertiary-background: #495057;
+  --quartery-background: #6c757d;
+
+  --primary-font: #f8f9fa;
+  --secondary-font: #e9ecef;
+  --tertiary-font: #dee2e6;
+  --quartery-font: #ced4da;
+  --fifth-font: #adb5bd;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: var(--secondary-background);
+}

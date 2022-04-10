@@ -1,0 +1,56 @@
+:root {
+  --primary-background: #212529;
+  --secondary-background: #343a40;
+  --tertiary-background: #495057;
+  --quartery-background: #6c757d;
+
+  --primary-font: #f8f9fa;
+  --secondary-font: #e9ecef;
+  --tertiary-font: #dee2e6;
+  --quartery-font: #ced4da;
+  --fifth-font: #adb5bd;
+
+  --primary-button: #00b4d8;
+  --secondary-button: #0096c7;
+}
+
+.screenshot_viewer_container {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 6;
+  padding: 0.5rem;
+}
+
+.close_btn {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  color: var(--primary-font);
+  cursor: pointer;
+}
+
+.inner_screenshot_viewer_container {
+  max-width: 700px;
+  margin: 5rem auto 0;
+  padding: 0.5rem;
+  background-color: var(--tertiary-background);
+}
+.inner_screenshot_viewer_container img {
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .screenshot_viewer_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .inner_screenshot_viewer_container {
+    margin: 0;
+    width: 100%;
+    padding: 0.3rem;
+  }
+}

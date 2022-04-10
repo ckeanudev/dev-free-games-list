@@ -1,0 +1,361 @@
+:root {
+  --primary-background: #212529;
+  --secondary-background: #343a40;
+  --tertiary-background: #495057;
+  --quartery-background: #6c757d;
+
+  --primary-font: #f8f9fa;
+  --secondary-font: #e9ecef;
+  --tertiary-font: #dee2e6;
+  --quartery-font: #ced4da;
+  --fifth-font: #adb5bd;
+
+  --primary-button: #00b4d8;
+  --secondary-button: #0096c7;
+}
+
+.game_detail_container {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.inner_game_detail_container {
+  display: flex;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 4.8rem 0rem 3rem;
+  min-height: 150vh;
+  position: relative;
+  align-items: flex-start;
+}
+
+.left_detail {
+  width: 30%;
+  padding: 0.5rem;
+  position: sticky;
+  top: 7%;
+}
+
+.left_detail img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.grid_left_content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  margin: 0.2rem 0;
+  gap: 0.5rem;
+}
+
+.left_grid {
+  background-color: var(--tertiary-background);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.left_grid p {
+  color: var(--fifth-font);
+  font-size: 0.9rem;
+}
+
+.rightt_grid_button {
+  height: 100%;
+  padding: 0.7rem;
+  border-radius: 5px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--primary-font);
+  background-color: var(--primary-button);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.rightt_grid_button:hover {
+  background-color: var(--secondary-button);
+}
+
+/* ------------------------------- RIGHT ------------ */
+
+.right_detail {
+  width: 70%;
+  height: 100%;
+  padding: 0rem 0.8rem 0.8rem;
+}
+.game_title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--quartery-font);
+  margin-bottom: 1.5rem;
+}
+
+.short_description {
+  color: var(--fifth-font);
+  margin-bottom: 1.5rem;
+}
+
+.grid_description {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.grid_info label {
+  color: var(--quartery-background);
+}
+
+.grid_info_detail {
+  color: var(--fifth-font);
+}
+
+.game_about_container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.game_about_container h2 {
+  font-size: 1.3rem;
+  color: var(--quartery-font);
+  font-weight: 500;
+  border-bottom: 0.5px solid var(--fifth-font);
+  padding-bottom: 5px;
+}
+
+.game_about_container p {
+  margin: 1rem 0;
+  text-align: justify;
+  color: var(--fifth-font);
+  line-height: 1.5rem;
+}
+
+.see_more_description_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0 2rem;
+}
+
+.see_more_description_btn button {
+  border: none;
+  background-color: transparent;
+  color: var(--fifth-font);
+  cursor: pointer;
+}
+
+.see_more_description_btn button:hover {
+  color: var(--quartery-background);
+}
+
+.system_requirement_container {
+  width: 100%;
+}
+
+.system_requirement_container h2 {
+  font-size: 1.3rem;
+  color: var(--quartery-font);
+  font-weight: 500;
+  border-bottom: 0.5px solid var(--fifth-font);
+  padding-bottom: 5px;
+}
+
+.inner_system_requirement_container {
+  margin: 1rem 0 3rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.system_info label {
+  color: var(--quartery-background);
+}
+
+.system_info p {
+  color: var(--fifth-font);
+}
+
+.screenshot_container {
+  width: 100%;
+}
+
+.screenshot_container h2 {
+  font-size: 1.3rem;
+  color: var(--quartery-font);
+  font-weight: 500;
+  border-bottom: 0.5px solid var(--fifth-font);
+  padding-bottom: 5px;
+}
+
+.inner_screenshot_container {
+  margin: 1rem 0 2rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.screenshot_image {
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  height: 150px;
+  border-radius: 5px;
+  transition: 0.2s ease;
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.2);
+}
+
+.screenshot_image:hover {
+  transform: translateY(-2px);
+}
+
+.screenshot_image img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ------------------------------- LOADING */
+
+.loading_container {
+  /* padding: 4.8rem 0rem 3rem; */
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading_container p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  color: var(--loading);
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ------------------------------- MEDIA */
+
+@media (max-width: 1000px) {
+  .inner_game_detail_container {
+    padding: 4.8rem 1rem 3rem;
+  }
+  .left_detail {
+    width: 35%;
+  }
+  .right_detail {
+    width: 65%;
+  }
+}
+
+@media (max-width: 750px) {
+  .inner_game_detail_container {
+    padding: 4.8rem 7rem 3rem;
+    flex-direction: column;
+  }
+  .left_detail {
+    width: 100%;
+    position: relative;
+  }
+  .right_detail {
+    width: 100%;
+  }
+}
+
+@media (max-width: 620px) {
+  .inner_game_detail_container {
+    padding: 4.8rem 5rem 3rem;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 520px) {
+  .inner_game_detail_container {
+    padding: 4.8rem 3rem 3rem;
+    flex-direction: column;
+  }
+  .game_title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  .short_description {
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .grid_info label {
+    font-size: 0.9rem;
+  }
+  .grid_info_detail {
+    font-size: 0.9rem;
+  }
+
+  .game_about_container h2 {
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+  }
+
+  .game_about_container p {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+  }
+
+  .system_requirement_container h2 {
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+  }
+
+  .system_requirement_container label {
+    font-size: 0.9rem;
+  }
+  .system_requirement_container p {
+    font-size: 0.9rem;
+  }
+
+  .screenshot_container h2 {
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+  }
+}
+
+@media (max-width: 420px) {
+  .inner_game_detail_container {
+    padding: 3.5rem 0.5rem 3rem;
+    flex-direction: column;
+  }
+  .left_detail {
+    padding: 0.5rem 1.5rem 1rem;
+  }
+}

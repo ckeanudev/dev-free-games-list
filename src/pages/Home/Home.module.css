@@ -1,0 +1,146 @@
+:root {
+  --primary-background: #212529;
+  --secondary-background: #343a40;
+  --tertiary-background: #495057;
+  --quartery-background: #6c757d;
+
+  --primary-font: #f8f9fa;
+  --secondary-font: #e9ecef;
+  --tertiary-font: #dee2e6;
+  --quartery-font: #ced4da;
+  --fifth-font: #adb5bd;
+
+  --primary-button: #00b4d8;
+  --secondary-button: #0096c7;
+  --loading: #219ebc;
+}
+
+.home_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 90vh;
+  padding: 4.5rem 1rem 5rem;
+}
+
+.h1_home_main {
+  text-align: center;
+  color: var(--primary-font);
+  font-weight: 500;
+  font-size: 1.7rem;
+  margin-bottom: 1.3rem;
+}
+
+.grid_view_games {
+  width: 100%;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.see_more_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.see_more {
+  margin-top: 1.5rem;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  border: 1.8px solid var(--quartery-font);
+  background-color: transparent;
+  border-radius: 5px;
+  color: var(--quartery-font);
+  font-weight: 500;
+}
+
+.see_more:hover {
+  border: 1.8px solid var(--fifth-font);
+  color: var(--fifth-font);
+}
+
+.no_result {
+  color: var(--quartery-font);
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.loading_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.loading_container p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  color: var(--loading);
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 810px) {
+  .h1_home_main {
+    margin-bottom: 0rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .h1_home_main {
+    font-size: 1.3rem;
+  }
+  .grid_view_games {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-top: 0rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .grid_view_games {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 570px) {
+  .grid_view_games {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .h1_home_main {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .h1_home_main {
+    font-size: 1rem;
+  }
+}
