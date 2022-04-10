@@ -26,6 +26,8 @@ const GameDetail = () => {
   useLayoutEffect(() => {
     setLoadingGameDetail("none");
 
+    document.title = `Game Info`;
+
     setTimeout(() => {
       getGameData();
     }, 300);
