@@ -9,6 +9,8 @@ import { ImSpinner10 } from "react-icons/im";
 import Category from "../../components/Category/Category";
 import CardGame from "../../components/CardGame/CardGame";
 
+import { motion } from "framer-motion";
+
 const Home = () => {
   const {
     allGameList,
@@ -32,11 +34,17 @@ const Home = () => {
       <Category />
 
       {loadingHome ? (
-        <div className={styles.grid_view_games}>
+        <motion.div
+          animate={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+          exist={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          className={styles.grid_view_games}
+        >
           {filteredGameList.map((game, i) => {
             return i < seeMore && <CardGame key={i} game={game} />;
           })}
-        </div>
+        </motion.div>
       ) : (
         <div className={styles.loading_container}>
           <p>

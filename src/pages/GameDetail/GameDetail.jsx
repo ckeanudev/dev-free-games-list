@@ -7,6 +7,8 @@ import Axios from "axios";
 import { ImSpinner10 } from "react-icons/im";
 import ScreenshotViewer from "../../components/ScreenshotViewer/ScreenshotViewer";
 
+import { motion } from "framer-motion";
+
 const GameDetail = () => {
   let params = useParams();
 
@@ -98,7 +100,13 @@ const GameDetail = () => {
         />
       )}
       {loadingGameDetail === "loaded" ? (
-        <div className={styles.inner_game_detail_container}>
+        <motion.div
+          animate={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+          exist={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          className={styles.inner_game_detail_container}
+        >
           <div className={styles.left_detail}>
             <img src={gameData.thumbnail || ""} alt="" />
             <div className={styles.grid_left_content}>
@@ -255,7 +263,7 @@ const GameDetail = () => {
               </div>
             )}
           </div>
-        </div>
+        </motion.div>
       ) : loadingGameDetail === "none" ? (
         <div className={styles.loading_container}>
           <p>
