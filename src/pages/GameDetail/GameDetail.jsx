@@ -56,7 +56,9 @@ const GameDetail = () => {
      rgba(52, 58, 64, 1),
      rgba(52, 58, 64, 1),
      rgba(52, 58, 64, 1)),url(${
-       gameData.screenshots ? gameData.screenshots[0].image : ""
+       gameData.screenshots && gameData.screenshots.length > 0
+         ? gameData.screenshots[0].image
+         : ""
      })`,
     backgroundPosition: "top",
     backgroundRepeat: "no-repeat",
@@ -241,7 +243,7 @@ const GameDetail = () => {
               </div>
             )}
 
-            {gameData.screenshots && (
+            {gameData.screenshots && gameData.screenshots.length > 0 && (
               <div className={styles.screenshot_container}>
                 <h2>{gameData.title} Screenshots</h2>
                 <div className={styles.inner_screenshot_container}>
