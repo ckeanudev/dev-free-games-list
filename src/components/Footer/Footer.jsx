@@ -20,7 +20,7 @@ const Footer = () => {
         <p>
           Coded & Desined by{" "}
           <a
-            href="https://ckn.netlify.app/"
+            href="https://ckn-portfolio.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
