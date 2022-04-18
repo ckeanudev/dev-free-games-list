@@ -50,6 +50,7 @@
 .top {
   overflow: hidden;
   position: relative;
+  display: flex;
 }
 
 .top img {
